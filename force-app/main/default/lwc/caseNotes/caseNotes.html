@@ -1,0 +1,113 @@
+<template>
+	<template if:true={isLoading}>
+		<lightning-spinner alternative-text="Loading"></lightning-spinner>
+	</template>
+
+	<div class="slds-box">
+		<lightning-record-edit-form object-api-name="Case_Note__c">
+			<div class="slds-grid">
+				<div class="slds-size_1-of-2">
+					<label class="slds-form-element__label">Communication Date:</label>
+					<lightning-input-field
+						required
+						variant="label-hidden"
+						field-name="Communication_Date__c"
+						class="Communication_Date__c"
+						name="communicationDate"
+						onchange={handleChange}
+					></lightning-input-field>
+				</div>
+
+				&nbsp;
+
+				<div class="slds-size_1-of-2">
+					<label class="slds-form-element__label">Communication Result:</label>
+					<lightning-input-field
+						required
+						variant="label-hidden"
+						field-name="Communication_Result__c"
+						class="Communication_Result__c"
+						name="communicationResult"
+						onchange={handleChange}
+					></lightning-input-field>
+				</div>
+			</div>
+
+			<br />
+
+			<div class="slds-grid">
+				<div class="slds-size_1-of-2">
+					<label class="slds-form-element__label">Intervention Type</label>
+					<lightning-input-field
+						required
+						variant="label-hidden"
+						field-name="Intervention_Type__c"
+						class="Intervention_Type__c"
+						name="interventionType"
+						onchange={handleChange}
+					></lightning-input-field>
+				</div>
+
+				&nbsp;
+
+				<div class="slds-size_1-of-2">
+					<label class="slds-form-element__label">Type</label>
+					<lightning-input-field
+						required
+						variant="label-hidden"
+						field-name="Type__c"
+						class="Type__c"
+						name="type"
+						onchange={handleChange}
+					></lightning-input-field>
+				</div>
+			</div>
+
+			<br />
+
+			<div class="slds-grid">
+				<div class="slds-size_1-of-1">
+					<label class="slds-form-element__label"
+						><font style="color: red">*</font>Comments</label
+					>
+					<lightning-input-field
+						required
+						variant="label-hidden"
+						field-name="Comments__c"
+						class="Comments__c"
+						name="comments"
+						onchange={handleChange}
+					></lightning-input-field>
+				</div>
+			</div>
+		</lightning-record-edit-form>
+
+		<div class="create-button">
+			<lightning-button
+				label="Create Note"
+				onclick={createNote}
+				variant="brand"
+			></lightning-button>
+		</div>
+
+		<template if:true={notes.length}>
+			<table>
+				<thead class="my-header">
+					<tr>
+						<th>Created Date</th>
+						<th>Communication Date</th>
+						<th>Communication Result</th>
+						<th>Intervention Type</th>
+						<th>Type</th>
+						<th class="comment">Comments</th>
+					</tr>
+				</thead>
+				<tbody>
+					<template for:each={notes} for:item="note">
+						<c-case-note key={note.Id} note={note}></c-case-note>
+					</template>
+				</tbody>
+			</table>
+		</template>
+	</div>
+</template>

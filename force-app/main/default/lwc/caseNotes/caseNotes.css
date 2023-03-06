@@ -1,0 +1,24 @@
+th {
+	vertical-align: middle;
+	text-align: center;
+	padding: 1px;
+}
+
+table,
+th {
+	border: 2px solid rgb(255, 255, 255);
+}
+
+.my-header {
+	color: white;
+	background-color: #00a1e2;
+	padding: 10px;
+}
+
+.comment {
+	width: 50%;
+}
+
+.create-button {
+	text-align: center;
+}

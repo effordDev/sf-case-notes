@@ -1,0 +1,12 @@
+:host {
+	/* display: table-row; */
+	display: contents;
+}
+
+td {
+	vertical-align: middle;
+	text-align: center;
+	padding: 1px;
+	border: 2px solid rgb(255, 255, 255);
+	background-color: #f6f2fb;
+}
