@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Intervention_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Intervention Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Resource Navigation</fullName>
+                <default>false</default>
+                <label>Resource Navigation</label>
+            </value>
+            <value>
+                <fullName>Career Coaching</fullName>
+                <default>false</default>
+                <label>Career Coaching</label>
+            </value>
+            <value>
+                <fullName>Academic Advising</fullName>
+                <default>false</default>
+                <label>Academic Advising</label>
+            </value>
+            <value>
+                <fullName>Mental Health Support</fullName>
+                <default>false</default>
+                <label>Mental Health Support</label>
+            </value>
+            <value>
+                <fullName>Outreach</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Outreach</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
