@@ -15,5 +15,9 @@
                 <object>Contact</object>
             </objects> 
         </targetConfig>
+
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="recordId" type="String"/>
+        </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>
